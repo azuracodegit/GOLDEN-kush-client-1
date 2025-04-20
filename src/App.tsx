@@ -593,13 +593,18 @@ function App() {
                               })}</span>
                               <span className="font-semibold text-amber-500 text-lg">{sale.amount.toFixed(2)}€</span>
                             </div>
-                            {Array.isArray(sale.products) && sale.products.length > 0 && (
+                            {sale.products && (
                               <div className="mt-2">
                                 <p className="text-gray-300 font-medium mb-1">Produits achetés :</p>
                                 <ul className="list-disc list-inside space-y-1 text-gray-300">
-                                  {sale.products.map((product, index) => (
-                                    <li key={index} className="ml-2">{product}</li>
-                                  ))}
+                                  {typeof sale.products === 'string' 
+                                    ? JSON.parse(sale.products).map((product: string, index: number) => (
+                                        <li key={index} className="ml-2">{product}</li>
+                                      ))
+                                    : sale.products.map((product: string, index: number) => (
+                                        <li key={index} className="ml-2">{product}</li>
+                                      ))
+                                  }
                                 </ul>
                               </div>
                             )}
