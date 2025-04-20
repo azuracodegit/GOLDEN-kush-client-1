@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Search, UserPlus, Plus, Minus, Edit2, Trash2, ShoppingBag, X, Gift } from 'lucide-react';
 import Confetti from 'react-confetti';
 import { supabase } from './supabaseClient';
-import logo from '../public/old-n-kush-logo.png';
 
 interface Sale {
   id: string;
@@ -377,7 +376,7 @@ function App() {
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
               <img 
-                src={logo}
+                src={import.meta.env.BASE_URL + 'old-n-kush-logo.png'}
                 alt="Gold N Kush Logo" 
                 className="h-40 w-auto"
               />
