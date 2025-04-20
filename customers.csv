@@ -1,0 +1,4 @@
+id,name,created_at,total_spent,spent_since_last_gift,gifts_claimed,available_gifts
+uuid_generate_v4(),Test Client 1,2024-04-17 12:00:00,0,0,0,0
+uuid_generate_v4(),Test Client 2,2024-04-17 12:00:00,0,0,0,0
+uuid_generate_v4(),Test Client 3,2024-04-17 12:00:00,0,0,0,0 
