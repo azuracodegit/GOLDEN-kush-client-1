@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react';
 import { VitePWA } from 'vite-plugin-pwa';
 
 export default defineConfig({
+  base: '/GOLDEN-kush-client-1/',
   plugins: [
     react(),
     VitePWA({
@@ -40,7 +41,8 @@ export default defineConfig({
     commonjsOptions: {
       include: [/lucide-react/, /node_modules/]
     },
-    sourcemap: true
+    sourcemap: true,
+    outDir: 'dist'
   },
   server: {
     port: 5173,
